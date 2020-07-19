@@ -1,0 +1,22 @@
+{
+  "name": "StateMachine123",
+  "version": "0.1.0",
+  "summary": "A short description of StateMachine123.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/chengqifan/StateMachine123",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "chengqifan": "chengqifan@bytedance.com"
+  },
+  "source": {
+    "git": "https://github.com/chengqifan/StateMachine123.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "StateMachine123/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - StateMachine (0.1.0)
+
+DEPENDENCIES:
+  - StateMachine (from `./StateMachine`)
+
+EXTERNAL SOURCES:
+  StateMachine:
+    :path: "./StateMachine"
+
+SPEC CHECKSUMS:
+  StateMachine: ef84e2fb05d81f941245577b8170f86ffcd67f1a
+
+PODFILE CHECKSUM: d72f53663f175d0896ffb5fba54d943a521ac66f
+
+COCOAPODS: 1.8.4

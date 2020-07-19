@@ -1,0 +1,6 @@
+framework module StateMachine {
+  umbrella header "StateMachine-umbrella.h"
+
+  export *
+  module * { export * }
+}
