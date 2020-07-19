@@ -3,8 +3,10 @@ Examples
 
 Simple Example
 
+## setup states
 ```
-		let redState = KIState(name: "red", userInfo: ["colorInfo": "this is red"])
+	
+	let redState = KIState(name: "red", userInfo: ["colorInfo": "this is red"])
         redState.didEnterState = {[weak self] _, _ in
             self?.button.backgroundColor = UIColor.red
         }
@@ -21,24 +23,31 @@ Simple Example
         blackState.didEnterState = {[weak self] _, _ in
             self?.button.backgroundColor = UIColor.black
         }
+	
 
         self.machine.add(states: [redState, yellowState, greenState, blackState])
+```
+	
+## setup event
 
+	```
         let event1 = KIEvent(name: "toRed", sourceStates: [greenState, yellowState], destinationState: redState)
         let event2 = KIEvent(name: "toGreen", sourceStates: [blackState, blackState], destinationState: greenState)
         let event3 = KIEvent(name: "toBlack", sourceStates: [redState, greenState], destinationState: blackState)
         let event4 = KIEvent(name: "toYellow", sourceStates: [greenState], destinationState: yellowState)
 
         self.machine.add(events: [event1, event2, event3, event4])
+```
+## set a primitive state
 
-        //set a primitive state
+```
         machine.setCurrentState(greenState)  
-        
         ```
         
         Fire State:
         ```
-        //        machine.fire(event: "toYellow", userInfo: [:])//fired
-//        machine.fire(event: "toRed", userInfo: [:])// fired
+        machine.fire(event: "toYellow", userInfo: [:])//fired
+	machine.fire(event: "toRed", userInfo: [:])// fired
         machine.fire(event: "black", userInfo: [:])// not fired
+	
         ```
